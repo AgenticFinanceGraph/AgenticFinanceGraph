@@ -11,6 +11,7 @@
 
 ## Latest
 
+- **2 Oct 2026** — Security pass on the website: a sign-in signature now works only once, the contact form limits how often one sender can write (by a one-way hash, cleared after 7 days), and two build files are no longer served. Figures from a third-party feed that stopped updating on 23 Sep now carry that date instead of looking current. [Changelog →](https://agenticfinancegraph.com/changelog-september-2026-what-we-added-and-what-it-measures)
 - **2 Oct 2026** — [Research Note 02, v1.2](https://agenticfinancegraph.com/research): the $3.2M a fleet of agent Safe accounts sent through bridges reached the same Safes on Arbitrum, 92% straight into lending vaults; and address poisoners planted copies of a thief's address in the victim's history within six minutes. Spec [v0.2](https://github.com/AgenticFinanceGraph/agentic-finance-graph-spec/blob/main/CHANGELOG.md) adds 14 definitions; MCP [v0.1.1](https://github.com/AgenticFinanceGraph/agentic-finance-graph-mcp/blob/main/CHANGELOG.md) adds security scanning.
 - **30 Sep 2026** — Bridges followed to the other side: every counted agent payment into a bridge, traced to the chain it reached through the bridge's own public record. A correction: our Circle CCTP counter read zero because it watched the wrong contract. [Live data →](https://agenticfinancegraph.com/live-agentic-finance-data-stablecoins-ai-agent-tokens-vault-tvl)
 - **28 Sep 2026** — The MCP server and the open accounting spec published here.
