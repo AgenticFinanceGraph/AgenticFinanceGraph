@@ -9,6 +9,14 @@
 
 *Live figures, read from [/api/state](https://agenticfinancegraph.com/api/state) each time this page is shown.*
 
+## Latest
+
+- **2 Oct 2026** — [Research Note 02, v1.2](https://agenticfinancegraph.com/research): the $3.2M a fleet of agent Safe accounts sent through bridges reached the same Safes on Arbitrum, 92% straight into lending vaults; and address poisoners planted copies of a thief's address in the victim's history within six minutes. Spec [v0.2](https://github.com/AgenticFinanceGraph/agentic-finance-graph-spec/blob/main/CHANGELOG.md) adds 14 definitions; MCP [v0.1.1](https://github.com/AgenticFinanceGraph/agentic-finance-graph-mcp/blob/main/CHANGELOG.md) adds security scanning.
+- **30 Sep 2026** — Bridges followed to the other side: every counted agent payment into a bridge, traced to the chain it reached through the bridge's own public record. A correction: our Circle CCTP counter read zero because it watched the wrong contract. [Live data →](https://agenticfinancegraph.com/live-agentic-finance-data-stablecoins-ai-agent-tokens-vault-tvl)
+- **28 Sep 2026** — The MCP server and the open accounting spec published here.
+
+All changes, dated: [the changelog](https://agenticfinancegraph.com/changelog-september-2026-what-we-added-and-what-it-measures).
+
 ## What we do
 
 - **Rank.** Every ERC-8004 agent registered on Base, walked up a ladder from "registered" to "seen paying" (L7), "still funded" (L8) and "repeat trade" (L9). [The rank →](https://agenticfinancegraph.com/ranked-ai-agents-observed-paying-l7-liveness)
@@ -37,7 +45,8 @@
 
 ## Open source here
 
-- [**agentic-finance-graph-mcp**](https://github.com/AgenticFinanceGraph/agentic-finance-graph-mcp) — the MCP bridge and the `afg` CLI. Apache-2.0, no dependencies, read-only.
+- [**agentic-finance-graph-mcp**](https://github.com/AgenticFinanceGraph/agentic-finance-graph-mcp) — the MCP bridge and the `afg` CLI. Apache-2.0, no dependencies, read-only, security-scanned on every push.
+- [**agentic-finance-graph-spec**](https://github.com/AgenticFinanceGraph/agentic-finance-graph-spec) — how we count: the accounting spec, every metric definition, the data checks and test vectors. CC BY 4.0.
 
 ## Work with us
 
@@ -45,6 +54,6 @@
 - **Platforms, institutions and investors:** [agenticfinancegraph.com/contact](https://agenticfinancegraph.com/contact)
 - **Agents:** `POST https://agenticfinancegraph.com/api/contact` with `{kind, message, reply_to}`.
 
-[X @AgenticGraph](https://x.com/AgenticGraph) · [Telegram](https://t.me/AgenticFinanceGraph) · agenticfinancegraph@proton.me · ERC-8004 agent #95875 on Base
+[X @AgenticGraph](https://x.com/AgenticGraph) · [Telegram](https://t.me/AgenticFinanceGraph) · [agenticfinancegraph@proton.me](mailto:agenticfinancegraph@proton.me) · ERC-8004 agent #95875 on Base
 
 <sub>Research, not investment advice.</sub>
