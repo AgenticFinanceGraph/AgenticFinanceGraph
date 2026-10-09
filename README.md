@@ -11,6 +11,8 @@
 
 ## Latest
 
+- **9 Oct 2026** — MCP bridge [v0.2.1](https://github.com/AgenticFinanceGraph/agentic-finance-graph-mcp/releases/tag/v0.2.1): a Dockerfile, so directories that start servers from source can check it. The server is now listed in the official MCP Registry as `com.agenticfinancegraph/agentic-finance-graph` (publisher verified by our domain), on Smithery and on Glama (health-checked). All nine evidence packs are in the Coinbase x402 Bazaar and on x402scan.
+- **5 Oct 2026** — Agent statements: every three hours each paying agent gets a statement (outflow split into spending and routing, what left its control, income, open flags), hash-chained to the previous one and provable against a Merkle root we sign with Ed25519. Also: what changed since the last sweep beside every headline figure; each detector's published record (fired, confirmed, reversed); who paid an address; and binding confidence on every agent page. Spec [v0.3](https://github.com/AgenticFinanceGraph/agentic-finance-graph-spec/blob/main/CHANGELOG.md) (276 definitions), MCP [v0.2.0](https://github.com/AgenticFinanceGraph/agentic-finance-graph-mcp/blob/main/CHANGELOG.md) (11 read-only tools).
 - **2 Oct 2026** — Security pass on the website: a sign-in signature now works only once, the contact form limits how often one sender can write (by a one-way hash, cleared after 7 days), and two build files are no longer served. Figures from a third-party feed that stopped updating on 23 Sep now carry that date instead of looking current. [Changelog →](https://agenticfinancegraph.com/changelog-september-2026-what-we-added-and-what-it-measures)
 - **2 Oct 2026** — [Research Note 02, v1.2](https://agenticfinancegraph.com/research): the $3.2M a fleet of agent Safe accounts sent through bridges reached the same Safes on Arbitrum, 92% straight into lending vaults; and address poisoners planted copies of a thief's address in the victim's history within six minutes. Spec [v0.2](https://github.com/AgenticFinanceGraph/agentic-finance-graph-spec/blob/main/CHANGELOG.md) adds 14 definitions; MCP [v0.1.1](https://github.com/AgenticFinanceGraph/agentic-finance-graph-mcp/blob/main/CHANGELOG.md) adds security scanning.
 - **30 Sep 2026** — Bridges followed to the other side: every counted agent payment into a bridge, traced to the chain it reached through the bridge's own public record. A correction: our Circle CCTP counter read zero because it watched the wrong contract. [Live data →](https://agenticfinancegraph.com/live-agentic-finance-data-stablecoins-ai-agent-tokens-vault-tvl)
@@ -23,7 +25,7 @@ All changes, dated: [the changelog](https://agenticfinancegraph.com/changelog-se
 - **Rank.** Every ERC-8004 agent registered on Base, walked up a ladder from "registered" to "seen paying" (L7), "still funded" (L8) and "repeat trade" (L9). [The rank →](https://agenticfinancegraph.com/ranked-ai-agents-observed-paying-l7-liveness)
 - **Count.** Payments in USDC, USDT, EURC and DAI, split by their receipts into real spending, positions the payer still holds, and routing hops that are not spending at all. [Where agent money goes →](https://agenticfinancegraph.com/where-ai-agent-money-goes-real-spending-vs-routing-2026)
 - **Detect.** Drains, retry storms, registrations that changed owner, unknown EIP-7702 delegations. [Detections →](https://agenticfinancegraph.com/detections-ai-agent-anomaly-log-mint-bursts-retry-storms)
-- **Publish.** Dated research notes, a free API, an MCP server, and evidence packs about one agent for 1 to 25 cents over x402. [Research →](https://agenticfinancegraph.com/research)
+- **Publish.** Dated research notes, a free API, an MCP server, signed three-hourly agent statements, and evidence packs about one agent or address for 1 to 25 cents over x402. [Research →](https://agenticfinancegraph.com/research)
 
 ## Use it
 
@@ -31,7 +33,7 @@ All changes, dated: [the changelog](https://agenticfinancegraph.com/changelog-se
 |---|---|
 | Website | [agenticfinancegraph.com](https://agenticfinancegraph.com) |
 | The Desk (watch your agents) | [agenticfinancegraph.com/desk](https://agenticfinancegraph.com/desk) |
-| MCP server | `https://agenticfinancegraph.com/mcp` — [setup guide](https://agenticfinancegraph.com/mcp-server-connect-your-ai-to-agent-money-data) |
+| MCP server | `https://agenticfinancegraph.com/mcp` — [setup guide](https://agenticfinancegraph.com/mcp-server-connect-your-ai-to-agent-money-data) · official MCP Registry: `com.agenticfinancegraph/agentic-finance-graph` |
 | CLI | `npx -y github:AgenticFinanceGraph/agentic-finance-graph-mcp state` |
 | Free API | [/api/state](https://agenticfinancegraph.com/api/state) · [/api/agents](https://agenticfinancegraph.com/api/agents) · [OpenAPI](https://agenticfinancegraph.com/openapi.json) · [llms.txt](https://agenticfinancegraph.com/llms.txt) |
 | Definitions | [Every figure, defined](https://agenticfinancegraph.com/def) |
