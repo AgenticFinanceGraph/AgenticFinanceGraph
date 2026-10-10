@@ -9,6 +9,12 @@
 
 *Live figures, read from [/api/state](https://agenticfinancegraph.com/api/state) each time this page is shown.*
 
+## See it in 30 seconds
+
+https://github.com/user-attachments/assets/ee95c1e9-54c2-49fc-b756-5ab58203861d
+
+*The Desk, recorded on the live site: connect a wallet, your Desk opens, watch any agent, see its history, request the data for 1 cent. Open yours at [agenticfinancegraph.com/desk](https://agenticfinancegraph.com/desk).*
+
 ## Latest
 
 - **10 Oct 2026** — [**amlsim-agentic**](https://github.com/AgenticFinanceGraph/amlsim-agentic): IBM's AMLSim adapted for AI-agent wallets. A generator that produces labelled synthetic payment graphs (AMLSim's eight laundering typologies ported, thirteen agent-payment shapes added, each with a near-miss built *not* to be caught) and a validator that runs our production detectors over them and reports precision and recall. First measurements, 2,813 and 22,894 synthetic agents: retry storms, mint bursts and endpoint streaks 100% on both; the drain rule 100% recall with 60–64% precision, every false alarm a first large purchase. The near-misses found two real faults in the live rules (storms split by the calendar-hour bucket, under-reported about 4x on live data; a silent `LIMIT 100`) and the candidate fixes are measured in the same report, held for the monthly correction release. Also today: a Telegram alerts bot ([@AgenticGraphBot](https://t.me/AgenticGraphBot), watch an agent and hear about incidents on it), the MCP server listed on [LobeHub](https://lobehub.com/mcp/agenticfinancegraph-agentic-finance-graph-mcp), and the note to IBM's maintainers at [IBM/AMLSim#93](https://github.com/IBM/AMLSim/issues/93).
