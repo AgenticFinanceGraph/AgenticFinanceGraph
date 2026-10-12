@@ -2,6 +2,8 @@
 
 **The independent ledger of machine money.** We measure which AI agents on Base actually pay, how much of their money was really spent, and what left their control — from receipts on the chain, with every figure defined and timestamped.
 
+> **We have no token.** Any coin using our name is not ours, including "Agentic Finance Graph (AFG)" on Robinhood Chain (`0x3f6dba1b74bf3a8d123ad05f24ddfa952245bac2`), which an unrelated wallet launched on 6 Sep 2026. [How it was launched, traced →](https://dev.to/agenticfinancegraph/someone-launched-a-coin-with-our-name-here-is-the-trail-and-three-fixes-for-launchpads-7f4)
+
 [![agents registered on Base](https://img.shields.io/endpoint?url=https%3A%2F%2Fagenticfinancegraph.com%2Fapi%2Fstate%3Fview%3Dshields%26key%3Dregistrations_minted_total)](https://agenticfinancegraph.com)
 [![agents seen paying](https://img.shields.io/endpoint?url=https%3A%2F%2Fagenticfinancegraph.com%2Fapi%2Fstate%3Fview%3Dshields%26key%3Dactors_l7_plus)](https://agenticfinancegraph.com/ranked-ai-agents-observed-paying-l7-liveness)
 [![counted agent spending](https://img.shields.io/endpoint?url=https%3A%2F%2Fagenticfinancegraph.com%2Fapi%2Fstate%3Fview%3Dshields%26key%3Dobserved_pay_usd_total)](https://agenticfinancegraph.com/where-ai-agent-money-goes-real-spending-vs-routing-2026)
