@@ -28,7 +28,7 @@ https://github.com/user-attachments/assets/ee95c1e9-54c2-49fc-b756-5ab58203861d
 
   **Also:**
   - Our statement roots now form an append-only log in the shape of Certificate Transparency ([/api/statements/log](https://agenticfinancegraph.com/api/statements/log)): keep a signed head, and a consistency proof shows our history was not rewritten.
-  - The liveness sweep reads ERC-8004's endpoint-domain proof (about 1 agent in 300 publishes it).
+  - The liveness sweep reads ERC-8004's endpoint-domain proof (1 of the 642 agents checked in its first two sweeps publishes it).
   - A data check flags steps in our own series that no dated change explains ([/api/steps](https://agenticfinancegraph.com/api/steps)).
 
   Spec [v0.6](https://github.com/AgenticFinanceGraph/agentic-finance-graph-spec/releases/tag/v0.6) (303 definitions, 43 checks). [What changed](https://agenticfinancegraph.com/changelog-october-2026)
