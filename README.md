@@ -19,6 +19,28 @@ https://github.com/user-attachments/assets/ee95c1e9-54c2-49fc-b756-5ab58203861d
 
 ## Latest
 
+- **21 Oct 2026** — **Every x402 payment on Base, and agents that pay from a second wallet.**
+  - **The whole x402 rail:** we now read every EIP-3009 authorisation on Base USDC, hourly ([/api/x402-rail](https://agenticfinancegraph.com/api/x402-rail)). In the 24 hours to 21 Oct 07:48 UTC: 300,164 authorisations, $1.71M, 8,572 payers, 653 of them registered agents' wallets. 85% of sampled settlement transactions were submitted by listed x402 facilitators, now named from the public facilitator list (`x402.settle.submitter.v3`).
+  - **Two-wallet agents:** on some platforms an agent pays from the account its registration was minted to, while the registration sits in a second account. Those minting accounts are now joined to their agents (`binding.minter.v1`, 7,201 accounts), and transfers between an agent's own addresses no longer count as payments (`pay.usd.total.v2`). Posted to [erc-8004/erc-8004-contracts#99](https://github.com/erc-8004/erc-8004-contracts/issues/99) as a case for v2.
+  - **Onboarding is not an incident:** a registration handed to its holder within 24 hours of mint is logged, never opened as a live incident (`incident.live.v3`; 2,786 of 2,799 transfer detections were this shape).
+  - **The Engine** now marks our own method changes on its charts and calls a change across one "not comparable" instead of a market move. On the Desk, the wheel and its chart share one window.
+  - Spec [v0.8](https://github.com/AgenticFinanceGraph/agentic-finance-graph-spec/releases/tag/v0.8) (358 definitions). Upstream: we reviewed and approved [x402-foundation/x402#3858](https://github.com/x402-foundation/x402/pull/3858), the fix for the batch-settlement refund bug we traced in #3730. [What changed](https://agenticfinancegraph.com/changelog-october-2026)
+- **18–20 Oct 2026** — **Two corrections to how we read payments, both dated at [/api/changepoints](https://agenticfinancegraph.com/api/changepoints).**
+  - **A starved queue:** the payment reader served its queue in address order, so some flagged wallets waited up to three weeks for their first read. Since 18 Oct it is served by priority. The catch-up read 87,328 payments worth $4.08M that were made before 18 Oct (L7+ 7,630 → 9,593 by 20 Oct): payments that already happened, read late, not new activity.
+  - **Batched settlements:** x402 settlements batched through Multicall3 now count as authorisations (`x402.settle.submitter.v2`).
+  - **A fixture:** 816 of 553,819 ERC-8004 ratings on Base follow a payment from the rater, published as a [fixture](https://github.com/AgenticFinanceGraph/agentic-finance-graph-spec/tree/main/fixtures) anyone can recount.
+- **13 Oct 2026** — **Ladder v2, and six measured layers.**
+  - **Ladder v2:** every rung is now stated as the code runs it. L7 needs a payment that left the agent's control; L9 needs three independent counterparties.
+  - **New measured layers:**
+    - a probe-then-drain rule;
+    - operator sets and sibling notices;
+    - a behaviour clock per agent;
+    - an independence score;
+    - how ranked agents end;
+    - a Merkle-sum tree over every counted payment, with signed heads ([/api/sum-log](https://agenticfinancegraph.com/api/sum-log));
+    - issuer freezes on Base (503 addresses frozen; no registered agent ever paid one).
+  - **New pack:** a 5¢ "where did the money go" trace.
+  - **Versions:** MCP server 1.7.0 ([changelog](https://github.com/AgenticFinanceGraph/agentic-finance-graph-mcp/blob/main/CHANGELOG.md)); spec [v0.7](https://github.com/AgenticFinanceGraph/agentic-finance-graph-spec/releases/tag/v0.7) (322 definitions).
 - **16 Oct 2026** — **The security layer, in shadow.** A check before an agent pays (seven measured facts about the payee and a decision under a policy in the AP2 constraint vocabulary, log-only), a watch after it (is the payment in character for this agent, scored every five minutes against its own history), a three-hour Agent Pass with eight checks and a published Ed25519 key (unsigned until the shadow is lifted), the blast radius of a stolen key, and canaries an operator plants. Everything is measured from the chain and our ledger, never from what an agent says; nothing blocks a payment or opens an incident until a week of recorded decisions has been read by a person. Our own answers are now fenced: every stranger-written string leaves the MCP server and the API as `{untrusted, source, text}`. How it works, with live figures: [agenticfinancegraph.com/security](https://agenticfinancegraph.com/security). MCP bridge [v0.3.0](https://github.com/AgenticFinanceGraph/agentic-finance-graph-mcp/releases/tag/v0.3.0): `afg gate | pattern | pass | blast | facts` and an x402 `onBeforePaymentCreation` hook. Definitions: [behaviour.out_of_character.v2](https://agenticfinancegraph.com/def/behaviour.out_of_character.v2), [payee.facts.v1](https://agenticfinancegraph.com/def/payee.facts.v1), [agent.pass.v2](https://agenticfinancegraph.com/def/agent.pass.v2), [agent.blast_radius.v1](https://agenticfinancegraph.com/def/agent.blast_radius.v1), [canary.trigger.v1](https://agenticfinancegraph.com/def/canary.trigger.v1).
 - **12 Oct 2026, night** — We measured our own detectors against the literature before trusting them. **Address poisoning:**
   - Compared with the method of Tsuchiya et al. (USENIX Security 2025): of 82,132 plants either rule counts, ours found 80,509 and theirs 80,880.
@@ -63,7 +85,7 @@ All changes, dated: [the changelog](https://agenticfinancegraph.com/changelog-se
 | Telegram alerts | [@AgenticGraphBot](https://t.me/AgenticGraphBot) — `/watch 57657` and hear about incidents on that agent; daily figures in [the channel](https://t.me/AgenticFinanceGraph) |
 | MCP server | `https://agenticfinancegraph.com/mcp` — [setup guide](https://agenticfinancegraph.com/mcp-server-connect-your-ai-to-agent-money-data) · official MCP Registry: `com.agenticfinancegraph/agentic-finance-graph` |
 | CLI | `npx -y github:AgenticFinanceGraph/agentic-finance-graph-mcp state` |
-| Free API | [/api/state](https://agenticfinancegraph.com/api/state) · [/api/agents](https://agenticfinancegraph.com/api/agents) · [OpenAPI](https://agenticfinancegraph.com/openapi.json) · [llms.txt](https://agenticfinancegraph.com/llms.txt) |
+| Free API | [/api/state](https://agenticfinancegraph.com/api/state) · [/api/agents](https://agenticfinancegraph.com/api/agents) · [/api/x402-rail](https://agenticfinancegraph.com/api/x402-rail) · [OpenAPI](https://agenticfinancegraph.com/openapi.json) · [llms.txt](https://agenticfinancegraph.com/llms.txt) |
 | Definitions | [Every figure, defined](https://agenticfinancegraph.com/def) |
 
 ## How we count
