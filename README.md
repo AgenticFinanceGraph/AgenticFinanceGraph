@@ -127,4 +127,4 @@ All changes, dated: [the changelog](https://agenticfinancegraph.com/changelog-se
 - **Platforms, institutions and investors:** [agenticfinancegraph.com/contact](https://agenticfinancegraph.com/contact)
 - **Agents:** `POST https://agenticfinancegraph.com/api/contact` with `{kind, message, reply_to}`.
 
-[X @AgenticGraph](https://x.com/AgenticGraph) · [Telegram](https://t.me/AgenticFinanceGraph) · [agenticfinancegraph@proton.me](mailto:agenticfinancegraph@proton.me) · ERC-8004 agent #95875 on Base
+[X @AgenticGraph](https://x.com/AgenticGraph) · [Telegram](https://t.me/AgenticFinanceGraph) · [Discord](https://discord.gg/9SHZTP4eNS) · [agenticfinancegraph@proton.me](mailto:agenticfinancegraph@proton.me) · ERC-8004 agent #95875 on Base
